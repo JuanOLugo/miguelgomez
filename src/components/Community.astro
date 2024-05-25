@@ -1,0 +1,24 @@
+---
+import Card from "./Card.astro";
+import { Button, Link} from "@nextui-org/react"
+
+---
+
+<section class="flex  justify-center items-center h-screen gap-10  md:mt-0">
+    <div>
+        <h1 class="text-5xl font-bold  text-center">Explora nuestra comunidad❤️</h1>
+        <p class="text-xl font-light text-center my-2">Pioneros en marcas nacionales!! 🇨🇴 </p>
+        <div class="flex justify-center ">
+            <Button
+        href="/miguelgomez/project#community"
+        as={Link}
+        color="danger"
+        showAnchorIcon
+        variant="bordered"
+        
+      >
+        Ir a comunidad❤️
+      </Button>
+        </div>
+    </div>
+</section>

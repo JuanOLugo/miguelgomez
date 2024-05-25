@@ -1,0 +1,119 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { ProjectNav } from "../libs/ItemsButtons";
+import MiddleInfoProject from "../components/MiddleInfoProject.astro";
+import { Link, Button } from "@nextui-org/react";
+---
+
+<div>
+  <Layout items={ProjectNav} title="Proyecto 🤩">
+    <div>
+      <MiddleInfoProject
+        hscreen={true}
+        title="Introduccion"
+        littleDescription="Aprende todo sobre nuestra app! 🐊"
+        id="#"
+      >
+        <img
+          slot="img"
+          class="mt-4 bg-white px-5 w-full py-5 rounded-3xl h-96"
+          src="/miguelgomez/new.svg"
+          width="500px"
+        />
+        <p slot="des" class="my-5">
+          En esta página se detallan todas las características y beneficios de nuestra app de gestión de clientes, incluyendo su sencillez, velocidad, seguridad y moderna interfaz. Aquí descubrirás cómo nuestra app puede optimizar la gestión de tu negocio, con testimonios de usuarios satisfechos y una sección de preguntas frecuentes para resolver todas tus dudas.
+        </p>
+      </MiddleInfoProject>
+
+      <MiddleInfoProject hscreen={false}
+        title="Que es la app? 🙂"
+        littleDescription="Tenemos un apartado sencillo para ti! 🐊"
+        id="whatis"
+      >
+        <img
+          slot="img"
+          class="mt-4 bg-white w-full px-5 py-5 rounded-3xl h-96"
+          src="/miguelgomez/undraw_select_kb2d.svg"
+          width="500px"
+        />
+        <p slot="des" class="my-5">
+          Nuestra app gestiona datos de clientes, envía comunicaciones personalizadas, programa recordatorios y analiza comportamientos, adaptándose a negocios de cualquier tamaño para mejorar la eficiencia y relación con los clientes.
+        </p>
+      </MiddleInfoProject>
+
+      <MiddleInfoProject hscreen={false}
+        title="Que encontramos? 🚵‍♂️"
+        littleDescription="Esto ofrecemos para mejorar tu experiencia! 😄"
+        id="whatifind"
+      >
+        <img
+          slot="img"
+          class="mt-4 bg-white w-full px-5 py-5 rounded-3xl h-96"
+          src="/miguelgomez/new.svg"
+          width="500px"
+        />
+        <div slot="des" class="my-5">
+         <li>
+          <b>Sencillez:</b> Navegación intuitiva y claras instrucciones, ideal para usuarios de todos los niveles tecnológicos.
+         </li>
+         <br>
+         <li>
+          <b>Velocidad:</b> Operaciones rápidas y eficientes que ahorran tiempo en la gestión diaria.
+         </li>
+         <br>
+         <li>
+          <b>Seguridad:</b> Protección avanzada de datos con tecnologías de encriptación.
+         </li>
+         <br>
+         <li>
+          <b>Interfaz:</b> Diseño moderno y funcional para una experiencia de usuario óptima y acceso fácil a todas las funciones.
+         </li>
+        </div>
+      </MiddleInfoProject>
+
+      <MiddleInfoProject hscreen={false}
+        title="Comunidad 💌"
+        littleDescription="Contamos con cominidades en las redes! 🐊"
+        id="community"
+      >
+        <img
+          slot="img"
+          class="mt-4 bg-white w-full px-5 py-5 rounded-3xl h-96"
+          src="/miguelgomez/undraw_cooking_p7m1.svg"
+          width="500px"
+        />
+        <ul slot="des" class="my-5 flex flex-col md:flex-row w-56 md:w-full mx-auto">
+          <Button
+            href="#"
+            as={Link}
+            color="warning"
+            showAnchorIcon
+            variant="bordered"
+          >
+            Discord
+          </Button>
+
+          <Button
+            href="#"
+            as={Link}
+            color="primary"
+            showAnchorIcon
+            variant="bordered"
+            className="my-5 md:my-0 md:mx-5"
+          >
+            Facebook
+          </Button>
+          <Button
+            href="#"
+            as={Link}
+            color="success"
+            showAnchorIcon
+            variant="bordered"
+          >
+          Twitter
+          </Button>
+        </ul>
+      </MiddleInfoProject>
+    </div>
+  </Layout>
+</div>

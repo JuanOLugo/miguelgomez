@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {itemsButton} from "../libs/ItemsButtons"
+import MiddleInfo from "../components/MiddleInfo.astro";
+import {Button, Link} from "@nextui-org/react"
+---
+
+<div>
+    <Layout title="Contacto 📧" items={itemsButton}>
+        <MiddleInfo srcImage="/undraw_pic_profile_re_7g2h.svg" title="Contactate con nosotros 📧">
+            <div slot="description" class="">
+                <Button
+                href=""
+                as={Link}
+                color="secondary"
+                showAnchorIcon
+                variant="bordered"
+              >
+                Mail
+              </Button>
+
+              <Button
+              href="#"
+              as={Link}
+              color="warning"
+              showAnchorIcon
+              variant="bordered"
+            >
+              Facebook
+            </Button>
+
+            <Button
+            href="#"
+            as={Link}
+            color="success"
+            showAnchorIcon
+            variant="bordered"
+          >
+           Twitter
+          </Button>
+            </div>
+        </MiddleInfo>
+    </Layout>
+</div>

@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { itemsButton } from "../libs/ItemsButtons";
+import MiddleInfo from "../components/MiddleInfo.astro";
+import CardTaker from "../components/CardTaker.astro";
+import Card from "../components/Card.astro";
+import {Code} from "@nextui-org/code";
+---
+
+<div>
+  <Layout title="Equipo 💘" items={itemsButton}>
+    <MiddleInfo
+      srcImage="/miguelgomez/undraw_engineering_team_a7n2.svg"
+      title="Hecho con amor! 💞"
+    >
+      <p slot="description" class="text-2xl font-light">
+        Hacemos realidad tus ideas!🌎
+      </p>
+    </MiddleInfo>
+    <CardTaker
+      title="Lo hicimos posible! 🧠"
+      description="Dedicamos nuestro tiempo para que disfrutes el tuyo 🦚"
+    >
+      <Card title="Gomez" slot={"forcards"}>
+        <img slot="icon" src="/miguelgomez/miguel.jpg" alt="" class=" w-16 h-16 inset-0 rounded-full object-cover" />
+        <Code slot="description" className="mt-5">DESARROLLO CSS</Code>
+      </Card>
+
+      <Card title="Gonzalez" slot={"forcards"}>
+        <img slot="icon" src="/miguelgomez/yoshua2.jpg" alt="" class="w-16 h-16 inset-0 rounded-full object-cover"/>
+        <Code slot="description" className="mt-5">DESARROLLO HTML</Code>
+      </Card>
+
+      <Card title="De la rosa" slot={"forcards"} >
+        <img slot="icon" src="/miguelgomez/joshua1.jpg" alt="" class="w-16 h-16 inset-0 rounded-full object-cover"/>
+        <Code slot="description" className="mt-5">NAVAVEGACION</Code>
+      </Card>
+    </CardTaker>
+  </Layout>
+</div>

@@ -1,0 +1,37 @@
+---
+interface Props {
+  title: string;
+  items: any[];
+}
+import { itemsButton } from "../libs/ItemsButtons";
+
+const { title,  items } = Astro.props;
+
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en" class="dark text-foreground bg-background">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+      <Navbar brandName={"NexoClients"} client:only="react" itemsToMap={items} />
+      <main class="w-11/12 mx-auto md:w-full">
+        <slot />
+      </main>
+      <Footer brandName="NexoClient"/>
+  </body>
+</html>
+<style is:global>
+  html {
+    font-family: system-ui, sans-serif;
+    background-size: 224px;
+    color-scheme: dark light;
+  }
+</style>

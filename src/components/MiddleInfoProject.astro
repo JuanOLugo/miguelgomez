@@ -1,0 +1,18 @@
+---
+interface Props {
+    title: string;
+    littleDescription: string;
+    hscreen: boolean;
+    id: string;
+}
+
+const { title, littleDescription, id, hscreen } = Astro.props
+---
+
+<div id={id} class={` md:w-[50%] w-[90%] flex flex-col justify-center mx-auto ${hscreen ? "h-screen" : "mb-24"}`}>
+    <h1 class="text-4xl font-bold">{title}</h1>
+    <p class="text-xl font-light">{littleDescription}</p>
+    <slot name="img" />
+    <slot name="des"/>
+    <hr>
+</div>

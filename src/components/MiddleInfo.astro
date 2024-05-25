@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  srcImage: string;
+}
+
+const { title, srcImage } = Astro.props;
+---
+
+<div
+  class="flex justify-center md:gap-16 mx-auto md:w-9/12 h-screen md:m-auto items-center"
+>
+  <section class="text-center md:w-[40%] md:text-start md:mt-10">
+    <h1 class="text-6xl font-bold my-4">{title}</h1>
+    <slot name="description" />
+    <slot name="button" />
+  </section>
+
+  <section class="hidden md:block">
+    <slot name="any"/>
+    <img src={srcImage} />
+  </section>
+</div>

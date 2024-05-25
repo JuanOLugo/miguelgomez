@@ -1,0 +1,28 @@
+---
+import Card from "./Card.astro";
+
+
+
+interface Props {
+
+  title: string,
+  description: string,
+}
+
+const { title, description } = Astro.props
+---
+
+<section
+  class=" flex flex-col md:flex-row justify-around items-center md:w-[90%] mx-auto"
+>
+  <div class="mb-5">
+    <h1 class="text-6xl font-bold text-center my-5 md:text-start ">
+      {title}
+    </h1>
+    <p class="font-light text-2xl md:mt-9 text-center md:text-start ">{description}</p>
+  </div>
+  
+  <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+    <slot name="forcards"/>
+  </div>
+</section>
